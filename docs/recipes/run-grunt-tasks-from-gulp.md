@@ -32,7 +32,7 @@ gulp.task('copy', function (done) {
 
 ```
 
-Now start the task with: 
+Now start the task with:
 `gulp copy`
 
 With the aforementioned approach the grunt tasks get registered within gulp's task system. **Keep in mind grunt tasks are usually blocking (unlike gulp), therefore no other task (not even a gulp task) can run until a grunt task is completed.**

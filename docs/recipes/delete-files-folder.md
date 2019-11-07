@@ -1,4 +1,3 @@
-
 # Delete files and folders
 
 You might want to delete some files before running your build. Since deleting files doesn't work on the file contents, there's no reason to use a gulp plugin. An excellent opportunity to use a vanilla node module.
@@ -39,7 +38,7 @@ gulp.task('clean:mobile', function () {
   ]);
 });
 
-gulp.task('default', ['clean:mobile']);
+gulp.task('default', gulp.series('clean:mobile'));
 ```
 
 
@@ -76,7 +75,7 @@ gulp.task('clean:tmp', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['clean:tmp']);
+gulp.task('default', gulp.series('clean:tmp'));
 ```
 
 This will only delete the tmp dir.
